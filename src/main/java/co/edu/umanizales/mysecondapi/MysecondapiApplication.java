@@ -13,11 +13,4 @@ public class MysecondapiApplication {
 		SpringApplication.run(MysecondapiApplication.class, args);
 	}
 
-	// Método para normalizar texto: elimina tildes y lo pasa a minúsculas
-	// Se usa para comparar nombres sin importar acentos o mayúsculas
-	public static String normalize(String input) {
-		if (input == null) return null;
-		String normalized = Normalizer.normalize(input, Normalizer.Form.NFD);
-		return normalized.replaceAll("\\p{M}", "").toLowerCase();
-	}
 }
