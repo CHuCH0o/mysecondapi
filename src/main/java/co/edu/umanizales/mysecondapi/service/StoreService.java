@@ -46,21 +46,12 @@ public class StoreService {
                     String storeCode = line[0].trim();
                     String storeName = line[1].trim();
                     String townCode = line[2].trim();
-
-                    Location location = null;
-                    for (Location loc : locationService.getAllLocations()) {
-                        if (loc.getTownCode().equals(townCode)) {
-                            location = loc;
-                            break;
-                        }
-                    }
-
-                    Store store = new Store(storeCode, storeName, location);
+                    Store store = new Store(storeCode, storeName, locationService.getLocationByCode(townCode));
                     stores.add(store);
                 }
             }
         } catch (CsvValidationException e) {
-            throw new RuntimeException("Error leyendo el CSV de tiendas", e);
+            throw new RuntimeException(e);
         }
     }
 }
