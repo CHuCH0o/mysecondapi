@@ -1,6 +1,5 @@
 package co.edu.umanizales.mysecondapi.service;
 
-import co.edu.umanizales.mysecondapi.model.Location;
 import co.edu.umanizales.mysecondapi.model.Store;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
