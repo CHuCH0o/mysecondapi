@@ -105,5 +105,23 @@ public class LocationController {
                         MysecondapiApplication.normalize(loc.getType()).contains("municipio"))
                 .toList();
     }
+
+    // Lista las ubicaciones cuyo nombre comienza con letterA y termina con letterB (ignora tildes y mayúsculas)
+    @GetMapping("/{letterA}/{letterB}")
+    public List<Location> getLocationsByStartAndEnd(
+            @PathVariable String letterA,
+            @PathVariable String letterB) {
+
+        String start = MysecondapiApplication.normalize(letterA);
+        String end = MysecondapiApplication.normalize(letterB);
+
+        return locationService.getLocations().stream()
+                .filter(loc -> {
+                    String name = MysecondapiApplication.normalize(loc.getTownName());
+                    return name.startsWith(start) && name.endsWith(end);
+                })
+                .toList();
+    }
+
 }
 
