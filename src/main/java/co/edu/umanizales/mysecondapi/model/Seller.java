@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Seller {
-    private String identification;
-    private Parameter typeDocument; // Será una instancia de TypeDoc
-    private String name;
-    private String lastName;
-    private byte age;
-    private Location city;
+    private String identification;           // Número de identificación del vendedor
+    private TypeDocument typeDocument;       // Tipo de documento (CC, NIT)
+    private String name;                     // Nombre del vendedor
+    private String lastName;                 // Apellido del vendedor
+    private byte age;                        // Edad
+    private Location city;                   // Ciudad de residencia
 }
