@@ -10,6 +10,5 @@ import lombok.NoArgsConstructor;
 public class Store {
     private String code;       // Código único de la tienda
     private String name;       // Nombre de la tienda
-    private String address;    // Dirección física
     private Location city;     // Ciudad (referencia a una instancia de Location)
 }
