@@ -1,15 +1,35 @@
 package co.edu.umanizales.mysecondapi.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import co.edu.umanizales.mysecondapi.model.Seller;
+import co.edu.umanizales.mysecondapi.service.SellerService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@RequestMapping(path = "/seller")
+@RequestMapping("/sellers")
 public class SellerController {
 
+    // Servicio que gestiona los vendedores
+    private final SellerService sellerService;
+
+    // Constructor con inyección de dependencias
+    public SellerController(SellerService sellerService) {
+        this.sellerService = sellerService;
+    }
+
+    // GET /sellers
+    // Retorna todos los vendedores cargados desde el CSV
     @GetMapping
-    public String getSeller() {
-        return "RobertoCarlos";
+    public List<Seller> getAllSellers() {
+        return sellerService.getAllSellers();
+    }
+
+    // POST /sellers
+    // Agrega un nuevo vendedor manualmente (por JSON en Postman)
+    @PostMapping
+    public String addSeller(@RequestBody Seller seller) {
+        sellerService.addSeller(seller);
+        return "Vendedor agregado correctamente.";
     }
 }
