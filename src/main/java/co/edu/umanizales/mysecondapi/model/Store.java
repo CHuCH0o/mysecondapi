@@ -2,11 +2,14 @@ package co.edu.umanizales.mysecondapi.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Store {
-    private String code;       // Código de la tienda
+    private String code;       // Código único de la tienda
     private String name;       // Nombre de la tienda
-    private Location location; // Ubicación asociada (ciudad o municipio)
+    private String address;    // Dirección física
+    private Location city;     // Ciudad (referencia a una instancia de Location)
 }
