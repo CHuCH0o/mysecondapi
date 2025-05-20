@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Seller {
     private String identification;
-    private Parameter typeDoc; // Será una instancia de TypeDoc
+    private Parameter typeDocument; // Será una instancia de TypeDoc
     private String name;
     private String lastName;
     private byte age;
