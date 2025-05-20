@@ -53,4 +53,9 @@ public class StoreService {
             throw new RuntimeException(e);
         }
     }
+
+    // Metodo para agregar una tienda manualmente mediante POST
+    public void addStore(Store store) {
+        stores.add(store);
+    }
 }
