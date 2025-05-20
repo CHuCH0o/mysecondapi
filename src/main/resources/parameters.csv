@@ -1,3 +1,5 @@
 type,code,description
 document,CC,Cédula de Ciudadanía
 document,NIT,Número de Identificación Tributaria
+product,RM,Ropa Masculina
+product,RF,Ropa Femenina
