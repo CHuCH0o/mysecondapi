@@ -1,0 +1,5 @@
+code,price,stock,type_code
+P001,2500.0,10,EL
+P002,500.0,5,RM
+P003,1100.0,8,RF
+P004,3500.0,15,AL
