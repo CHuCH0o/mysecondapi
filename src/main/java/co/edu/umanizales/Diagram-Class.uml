@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/home/chucho/IdeaProjects/mysecondapi/src/main/java/co/edu/umanizales/mysecondapi</OriginalElement>
+  <nodes>
+    <node x="1404.0927785080132" y="-13.800016980876492">co.edu.umanizales.mysecondapi.model.Location</node>
+    <node x="-119.29526791101206" y="141.41553551084468">co.edu.umanizales.mysecondapi.model.Product</node>
+    <node x="1401.5187649213112" y="1449.851876510114">co.edu.umanizales.mysecondapi.MysecondapiApplication</node>
+    <node x="622.2854799181022" y="67.48256825304233">co.edu.umanizales.mysecondapi.model.Parameter</node>
+    <node x="524.2993265592701" y="1420.0305250322988">co.edu.umanizales.mysecondapi.controller.SaleController</node>
+    <node x="970.8312318014146" y="169.51810919034443">co.edu.umanizales.mysecondapi.service.ParameterService</node>
+    <node x="-117.16139268489616" y="597.9840084808048">co.edu.umanizales.mysecondapi.service.ProductService</node>
+    <node x="1380.817284251643" y="452.97503634103873">co.edu.umanizales.mysecondapi.service.LocationService</node>
+    <node x="1040.705916577963" y="519.332259937822">co.edu.umanizales.mysecondapi.model.Store</node>
+    <node x="310.1619441007454" y="210.92597613899903">co.edu.umanizales.mysecondapi.model.TypeProduct</node>
+    <node x="1897.3639968245877" y="1182.1430037619214">co.edu.umanizales.mysecondapi.controller.SellerController</node>
+    <node x="1403.9161458414383" y="926.387788096934">co.edu.umanizales.mysecondapi.controller.LocationController</node>
+    <node x="1085.9192121437827" y="921.3908905064469">co.edu.umanizales.mysecondapi.service.StoreService</node>
+    <node x="813.7511412949902" y="1261.3491624416372">co.edu.umanizales.mysecondapi.service.SaleService</node>
+    <node x="2248.2218182775964" y="1015.2043399980296">co.edu.umanizales.mysecondapi.service.SellerService</node>
+    <node x="565.4992525326331" y="471.4513083692269">co.edu.umanizales.mysecondapi.controller.ParameterController</node>
+    <node x="565.1502314715608" y="749.4880794123021">co.edu.umanizales.mysecondapi.model.Sale</node>
+    <node x="1900.394127141855" y="230.48843643621754">co.edu.umanizales.mysecondapi.model.TypeDocument</node>
+    <node x="225.03291668264995" y="918.0666367581118">co.edu.umanizales.mysecondapi.controller.ProductController</node>
+    <node x="249.2720186837517" y="484.18424310263515">co.edu.umanizales.mysecondapi.model.ProductSale</node>
+    <node x="1281.7437723365263" y="1272.9243218832712">co.edu.umanizales.mysecondapi.controller.StoreController</node>
+    <node x="1874.9920357312644" y="475.8079310061062">co.edu.umanizales.mysecondapi.model.Seller</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ProductController" target="co.edu.umanizales.mysecondapi.service.ProductService" relationship="TO_ONE">
+      <point x="-133.99991668264997" y="3.632418881807098E-4" />
+      <point x="198.0" y="975.567" />
+      <point x="198.0" y="752.484" />
+      <point x="137.50039268489616" y="-8.480804808641551E-6" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.model.TypeDocument" relationship="DEPENDENCY">
+      <point x="-29.999818277596205" y="-166.5" />
+      <point x="2399.222" y="322.9884364362175" />
+      <point x="119.00000000000023" y="0.0" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.TypeProduct" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="GENERALIZATION">
+      <point x="111.50005589925462" y="2.3861000954639167E-5" />
+      <point x="578.0" y="303.426" />
+      <point x="578.0" y="214.983" />
+      <point x="-105.0004799181022" y="4.3174695767334015E-4" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.StoreService" target="co.edu.umanizales.mysecondapi.service.LocationService" relationship="TO_ONE">
+      <point x="-2.121437826190231E-4" y="-130.49989050644695" />
+      <point x="1209.919" y="890.0" />
+      <point x="1586.317" y="890.0" />
+      <point x="-2.8425164305190265E-4" y="202.4999636589613" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.Sale" relationship="TO_MANY">
+      <point x="-196.0" y="-190.5" />
+      <point x="65.10090982342945" y="214.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.service.ProductService" relationship="TO_ONE">
+      <point x="-203.50014129499027" y="100.68183755836276" />
+      <point x="198.0" y="1552.531" />
+      <point x="198.0" y="752.484" />
+      <point x="137.50039268489616" y="-8.480804808641551E-6" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Sale" target="co.edu.umanizales.mysecondapi.model.Seller" relationship="TO_ONE">
+      <point x="8.648768528439177" y="214.49992058769794" />
+      <point x="764.799" y="1659.849" />
+      <point x="2627.722" y="1659.849" />
+      <point x="2627.722" y="985.0" />
+      <point x="2084.992" y="985.0" />
+      <point x="-3.5731264233618276E-5" y="238.50006899389382" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ProductService" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="DEPENDENCY">
+      <point x="137.50039268489616" y="145.01599151919515" />
+      <point x="530.0" y="897.5" />
+      <point x="530.0" y="447.018" />
+      <point x="727.285" y="447.018" />
+      <point x="-4.79918102200827E-4" y="147.50043174695767" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ParameterController" target="co.edu.umanizales.mysecondapi.model.TypeProduct" relationship="CREATE">
+      <point x="171.9997474673669" y="-3.0836922690014035E-4" />
+      <point x="947.0" y="552.951" />
+      <point x="947.0" y="388.426" />
+      <point x="111.50005589925462" y="85.00002386100095" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.Sale" relationship="CREATE">
+      <point x="-77.60090982342945" y="-190.5" />
+      <point x="183.5" y="214.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Seller" target="co.edu.umanizales.mysecondapi.model.Location" relationship="TO_ONE">
+      <point x="-210.00003573126446" y="6.899389381942456E-5" />
+      <point x="1832.416" y="714.308" />
+      <point x="1832.416" y="423.0" />
+      <point x="1568.593" y="423.0" />
+      <point x="2.2149198684928706E-4" y="202.50001698087647" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="DEPENDENCY">
+      <point x="-180.9998182775962" y="132.93866000197045" />
+      <point x="1596.244" y="1314.643" />
+      <point x="1596.244" y="1226.888" />
+      <point x="530.0" y="1226.888" />
+      <point x="530.0" y="447.018" />
+      <point x="727.285" y="447.018" />
+      <point x="-4.79918102200827E-4" y="147.50043174695767" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.SellerController" target="co.edu.umanizales.mysecondapi.service.SellerService" relationship="TO_ONE">
+      <point x="-14.999996824587697" y="57.499996238078666" />
+      <point x="2001.864" y="1349.0" />
+      <point x="2031.864" y="1349.0" />
+      <point x="2031.864" y="1457.352" />
+      <point x="2429.222" y="1457.352" />
+      <point x="1.8172240379499272E-4" y="166.49966000197037" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.service.StoreService" relationship="TO_ONE">
+      <point x="203.49985870500973" y="-1.6244163725787075E-4" />
+      <point x="1252.0" y="1451.849" />
+      <point x="1252.0" y="1243.849" />
+      <point x="1209.919" y="1243.849" />
+      <point x="-2.121437826190231E-4" y="130.50010949355317" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.LocationService" target="co.edu.umanizales.mysecondapi.model.Location" relationship="TO_MANY">
+      <point x="-2.8425164305190265E-4" y="-202.5000363410387" />
+      <point x="1586.317" y="423.0" />
+      <point x="1568.593" y="423.0" />
+      <point x="2.2149198684928706E-4" y="202.50001698087647" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ProductController" target="co.edu.umanizales.mysecondapi.model.Product" relationship="DEPENDENCY">
+      <point x="134.00008331735006" y="3.632418881807098E-4" />
+      <point x="515.0" y="975.567" />
+      <point x="515.0" y="423.5" />
+      <point x="154.0002679110121" y="86.58446448915532" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.SaleController" target="co.edu.umanizales.mysecondapi.service.SaleService" relationship="TO_ONE">
+      <point x="111.5" y="-25.681362590661593" />
+      <point x="-203.5" y="0.0" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.Product" relationship="DEPENDENCY">
+      <point x="-203.50014129499027" y="-59.34916244163719" />
+      <point x="515.0" y="1392.5" />
+      <point x="515.0" y="423.5" />
+      <point x="154.0002679110121" y="86.58446448915532" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.SellerController" target="co.edu.umanizales.mysecondapi.model.Seller" relationship="DEPENDENCY">
+      <point x="3.1754123028804315E-6" y="57.499996238078666" />
+      <point x="2016.864" y="1419.0" />
+      <point x="1882.492" y="1419.0" />
+      <point x="-202.50003573126446" y="238.50006899389382" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Sale" target="co.edu.umanizales.mysecondapi.model.Store" relationship="TO_ONE">
+      <point x="190.99976852843918" y="-7.941230205688043E-5" />
+      <point x="1068.419" y="963.988" />
+      <point x="1068.419" y="889.0" />
+      <point x="1159.706" y="889.0" />
+      <point x="8.342203682332183E-5" y="166.49974006217803" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.model.Location" relationship="DEPENDENCY">
+      <point x="-180.9998182775962" y="-32.06133999802955" />
+      <point x="1852.0" y="1149.643" />
+      <point x="1852.0" y="188.7" />
+      <point x="164.50022149198685" y="1.6980876495154007E-5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.LocationService" target="co.edu.umanizales.mysecondapi.model.Location" relationship="CREATE">
+      <point x="14.999715748356948" y="-202.5" />
+      <point x="32.72422149198678" y="202.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.LocationController" target="co.edu.umanizales.mysecondapi.model.Location" relationship="DEPENDENCY">
+      <point x="205.49985415856167" y="2.1190306608787068E-4" />
+      <point x="1852.0" y="1067.888" />
+      <point x="1852.0" y="188.7" />
+      <point x="164.50022149198685" y="1.6980876495154007E-5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.service.LocationService" relationship="TO_ONE">
+      <point x="-180.9998182775962" y="-17.061339998029553" />
+      <point x="1832.416" y="1164.643" />
+      <point x="1832.416" y="890.0" />
+      <point x="1586.317" y="890.0" />
+      <point x="-2.8425164305190265E-4" y="202.4999636589613" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ProductService" target="co.edu.umanizales.mysecondapi.model.TypeProduct" relationship="DEPENDENCY">
+      <point x="-137.5" y="0.0" />
+      <point x="-136.79526791101205" y="752.4840084808048" />
+      <point x="-136.79526791101205" y="-76.30000000000001" />
+      <point x="421.6619441007454" y="-76.30000000000001" />
+      <point x="0.0" y="-92.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ParameterController" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="DEPENDENCY">
+      <point x="-172.0002525326331" y="-3.0836922690014035E-4" />
+      <point x="530.0" y="552.951" />
+      <point x="530.0" y="447.018" />
+      <point x="727.285" y="447.018" />
+      <point x="-4.79918102200827E-4" y="147.50043174695767" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ParameterService" target="co.edu.umanizales.mysecondapi.model.TypeDocument" relationship="CREATE">
+      <point x="-2.3180141465672932E-4" y="142.49989080965554" />
+      <point x="1142.831" y="487.0" />
+      <point x="1332.331" y="487.0" />
+      <point x="1332.331" y="-61.30000000000001" />
+      <point x="2034.3939999999998" y="-61.30000000000001" />
+      <point x="14.999872858144727" y="-92.50043643621754" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Product" target="co.edu.umanizales.mysecondapi.model.TypeProduct" relationship="TO_ONE">
+      <point x="154.0" y="-33.489559371845644" />
+      <point x="-111.5" y="0.0" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.model.Seller" relationship="TO_MANY">
+      <point x="-14.999818277596205" y="-166.50033999802963" />
+      <point x="2414.222" y="985.0" />
+      <point x="2084.992" y="985.0" />
+      <point x="-3.5731264233618276E-5" y="238.50006899389382" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.service.SellerService" relationship="TO_ONE">
+      <point x="203.49985870500973" y="114.5028375583629" />
+      <point x="2031.864" y="1566.352" />
+      <point x="2031.864" y="1457.352" />
+      <point x="2429.222" y="1457.352" />
+      <point x="1.8172240379499272E-4" y="166.49966000197037" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ParameterService" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="TO_MANY">
+      <point x="-172.0" y="-97.0355409373021" />
+      <point x="105.0" y="0.0" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ProductService" target="co.edu.umanizales.mysecondapi.model.Product" relationship="TO_MANY">
+      <point x="3.9268489615551516E-4" y="-154.5000084808048" />
+      <point x="20.339" y="566.0" />
+      <point x="34.705" y="566.0" />
+      <point x="2.679110120595851E-4" y="195.50046448915532" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.model.Seller" relationship="CREATE">
+      <point x="-141.729782546332" y="-166.5" />
+      <point x="202.5" y="238.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Sale" target="co.edu.umanizales.mysecondapi.model.ProductSale" relationship="TO_MANY">
+      <point x="-191.0" y="-81.48807941230211" />
+      <point x="354.2720186837517" y="882.5" />
+      <point x="0.0" y="166.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.Store" relationship="DEPENDENCY">
+      <point x="-4.751141294990248" y="-190.50016244163726" />
+      <point x="1012.5" y="1199.891" />
+      <point x="990.0" y="1199.891" />
+      <point x="990.0" y="707.0" />
+      <point x="-118.99991657796318" y="21.16774006217804" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.StoreService" target="co.edu.umanizales.mysecondapi.model.Store" relationship="CREATE">
+      <point x="-35.21321214378281" y="-130.5" />
+      <point x="15.000083422036823" y="166.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Seller" target="co.edu.umanizales.mysecondapi.model.TypeDocument" relationship="TO_ONE">
+      <point x="-65.59790858940937" y="-238.5" />
+      <point x="0.0" y="92.49999999999997" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ParameterController" target="co.edu.umanizales.mysecondapi.service.ParameterService" relationship="TO_ONE">
+      <point x="-2.5253263311242335E-4" y="81.4996916307731" />
+      <point x="737.499" y="692.0" />
+      <point x="1012.5" y="692.0" />
+      <point x="-130.33123180141456" y="142.49989080965554" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.SaleController" target="co.edu.umanizales.mysecondapi.model.Sale" relationship="DEPENDENCY">
+      <point x="0.0" y="-57.5" />
+      <point x="-120.35090491229073" y="214.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.MysecondapiApplication" target="co.edu.umanizales.mysecondapi.MysecondapiApplication" relationship="DEPENDENCY">
+      <point x="0.0" y="49.5" />
+      <point x="1530.0187649213112" y="1581.352" />
+      <point x="1666.0187649213112" y="1581.352" />
+      <point x="1666.0187649213112" y="1499.351876510114" />
+      <point x="128.5" y="0.0" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.ProductSale" relationship="CREATE">
+      <point x="-42.25114129499025" y="-190.5" />
+      <point x="975.0" y="707.0" />
+      <point x="105.0" y="56.31575689736485" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.StoreController" target="co.edu.umanizales.mysecondapi.model.Store" relationship="DEPENDENCY">
+      <point x="-73.82477233652617" y="-57.500321883271226" />
+      <point x="1326.419" y="1199.891" />
+      <point x="990.0" y="1199.891" />
+      <point x="990.0" y="707.0" />
+      <point x="-118.99991657796318" y="21.16774006217804" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.TypeDocument" target="co.edu.umanizales.mysecondapi.model.Parameter" relationship="GENERALIZATION">
+      <point x="-1.2714185504592024E-4" y="-92.50043643621754" />
+      <point x="2019.394" y="-46.30000000000001" />
+      <point x="597.5" y="-46.30000000000001" />
+      <point x="597.5" y="214.983" />
+      <point x="-105.0004799181022" y="4.3174695767334015E-4" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SellerService" target="co.edu.umanizales.mysecondapi.service.ParameterService" relationship="TO_ONE">
+      <point x="1.8172240379499272E-4" y="-166.50033999802963" />
+      <point x="2429.222" y="-31.299999999999997" />
+      <point x="926.999" y="-31.299999999999997" />
+      <point x="926.999" y="692.0" />
+      <point x="1012.5" y="692.0" />
+      <point x="-130.33123180141456" y="142.49989080965554" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.Store" target="co.edu.umanizales.mysecondapi.model.Location" relationship="TO_ONE">
+      <point x="119.00008342203682" y="-2.599378219656501E-4" />
+      <point x="1363.317" y="685.832" />
+      <point x="1363.317" y="423.0" />
+      <point x="1568.593" y="423.0" />
+      <point x="2.2149198684928706E-4" y="202.50001698087647" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.model.ProductSale" target="co.edu.umanizales.mysecondapi.model.Product" relationship="TO_ONE">
+      <point x="-105.0000186837517" y="-2.4310263518145803E-4" />
+      <point x="175.339" y="650.684" />
+      <point x="175.339" y="566.0" />
+      <point x="34.705" y="566.0" />
+      <point x="2.679110120595851E-4" y="195.50046448915532" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.StoreController" target="co.edu.umanizales.mysecondapi.service.StoreService" relationship="TO_ONE">
+      <point x="-118.49977233652635" y="-3.218832712263975E-4" />
+      <point x="1252.0" y="1330.424" />
+      <point x="1252.0" y="1243.849" />
+      <point x="1209.919" y="1243.849" />
+      <point x="-2.121437826190231E-4" y="130.50010949355317" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.SaleService" target="co.edu.umanizales.mysecondapi.model.Seller" relationship="DEPENDENCY">
+      <point x="203.49985870500973" y="14.999837558362742" />
+      <point x="1384.019" y="1466.849" />
+      <point x="1384.019" y="1419.0" />
+      <point x="1882.492" y="1419.0" />
+      <point x="-202.50003573126446" y="238.50006899389382" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ParameterService" target="co.edu.umanizales.mysecondapi.model.TypeProduct" relationship="CREATE">
+      <point x="-172.00023180141454" y="-1.0919034443190867E-4" />
+      <point x="947.0" y="312.01800000000003" />
+      <point x="947.0" y="388.426" />
+      <point x="111.50005589925462" y="85.00002386100095" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.StoreService" target="co.edu.umanizales.mysecondapi.model.Store" relationship="TO_MANY">
+      <point x="-116.50021214378262" y="-130.49989050644695" />
+      <point x="1093.419" y="889.0" />
+      <point x="1159.706" y="889.0" />
+      <point x="8.342203682332183E-5" y="166.49974006217803" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.ParameterController" target="co.edu.umanizales.mysecondapi.model.TypeDocument" relationship="CREATE">
+      <point x="171.9997474673669" y="14.9996916307731" />
+      <point x="997.5" y="567.951" />
+      <point x="997.5" y="487.0" />
+      <point x="1332.331" y="487.0" />
+      <point x="1332.331" y="-61.30000000000001" />
+      <point x="2034.3939999999998" y="-61.30000000000001" />
+      <point x="14.999872858144727" y="-92.50043643621754" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ProductService" target="co.edu.umanizales.mysecondapi.model.Product" relationship="CREATE">
+      <point x="-14.999607315103844" y="-154.5" />
+      <point x="-29.36573208898794" y="195.5" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.service.ProductService" target="co.edu.umanizales.mysecondapi.service.ParameterService" relationship="TO_ONE">
+      <point x="137.50039268489616" y="82.19999151919512" />
+      <point x="485.533" y="834.684" />
+      <point x="485.533" y="692.0" />
+      <point x="1012.5" y="692.0" />
+      <point x="-130.33123180141456" y="142.49989080965554" />
+    </edge>
+    <edge source="co.edu.umanizales.mysecondapi.controller.LocationController" target="co.edu.umanizales.mysecondapi.service.LocationService" relationship="TO_ONE">
+      <point x="-1.4584143832507834E-4" y="-141.4997880969339" />
+      <point x="1609.416" y="890.0" />
+      <point x="1586.317" y="890.0" />
+      <point x="-2.8425164305190265E-4" y="202.4999636589613" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.340394973070018" showDependencies="true" x="1255.5" y="801.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
