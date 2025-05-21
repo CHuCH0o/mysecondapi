@@ -1,16 +1,19 @@
 package co.edu.umanizales.mysecondapi.controller;
 
 import co.edu.umanizales.mysecondapi.model.Parameter;
+import co.edu.umanizales.mysecondapi.model.TypeDocument;
+import co.edu.umanizales.mysecondapi.model.TypeProduct;
 import co.edu.umanizales.mysecondapi.service.ParameterService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/parameters")
 public class ParameterController {
 
-    // Inyección del servicio que gestiona los parámetros
+    // Servicio que gestiona los parámetros
     private final ParameterService parameterService;
 
     // Constructor
@@ -26,24 +29,41 @@ public class ParameterController {
     }
 
     // GET /parameters/type/{type}
-    // Retorna los parámetros filtrados por tipo (ejemplo: "document", "product")
+    // Retorna los parámetros filtrados por tipo ("document", "product")
     @GetMapping("/type/{type}")
     public List<Parameter> getParametersByType(@PathVariable String type) {
         return parameterService.getParametersByType(type);
     }
 
     // GET /parameters/code/{code}
-    // Retorna el parámetro que coincide con el código
+    // Retorna los parámetros que coincidan con el código
     @GetMapping("/code/{code}")
     public List<Parameter> getParametersByCode(@PathVariable String code) {
         return parameterService.getParametersByCode(code);
     }
 
     // POST /parameters
-    // Agrega un nuevo parámetro a la lista en memoria
+    // Agrega un nuevo parámetro según su tipo (product o document)
     @PostMapping
-    public String addParameter(@RequestBody Parameter parameter) {
-        parameterService.addParameter(parameter);
+    public String addParameter(@RequestBody Map<String, String> paramData) {
+        String type = paramData.get("type");
+        String code = paramData.get("code");
+        String description = paramData.get("description");
+
+        if (type == null || code == null || description == null) {
+            return "Error: Faltan campos obligatorios (type, code, description)";
+        }
+
+        Parameter newParam;
+        if (type.equalsIgnoreCase("product")) {
+            newParam = new TypeProduct(code, description);
+        } else if (type.equalsIgnoreCase("document")) {
+            newParam = new TypeDocument(code, description);
+        } else {
+            return "Error: Tipo no reconocido. Usa 'product' o 'document'.";
+        }
+
+        parameterService.addParameter(newParam);
         return "Parámetro agregado correctamente.";
     }
 }

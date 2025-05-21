@@ -11,5 +11,5 @@ public class Product {
     private String code;                // Código único del producto
     private double price;              // Precio del producto
     private int stock;                 // Cantidad en inventario
-    private Parameter typeProduct;     // Tipo de producto (instancia de TypeProduct)
+    private TypeProduct typeProduct;     // Tipo de producto (instancia de TypeProduct)
 }

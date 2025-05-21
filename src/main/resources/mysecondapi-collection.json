@@ -1,0 +1,454 @@
+{
+  "info": {
+    "name": "MySecondAPI - Full Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Locations",
+      "item": [
+        {
+          "name": "GET all Locations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/locations",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "locations"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Location by Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/location/code/05001",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "location",
+                "code",
+                "05001"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Locations by Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/locations/name/Medellin",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "locations",
+                "name",
+                "Medellin"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Locations by Initials",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/locations/il/Me",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "locations",
+                "il",
+                "Me"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Locations by State Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/locations/state/05",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "locations",
+                "state",
+                "05"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET State Representatives",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/states",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "states"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET State Info by Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/state/05",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "state",
+                "05"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Locations by Start and End Letters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/M/n",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "M",
+                "n"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Capitals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/capitals",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "capitals"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Parameters",
+      "item": [
+        {
+          "name": "GET all Parameters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/parameters",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "parameters"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Parameters by Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/parameters/type/document",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "parameters",
+                "type",
+                "document"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Parameters by Code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/parameters/code/CC",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "parameters",
+                "code",
+                "CC"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Parameter (TypeDocument o TypeProduct)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"product\",\n  \"code\": \"LI\",\n  \"description\": \"Licores\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/parameters",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "parameters"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "GET all Products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/products",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "products"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/products",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "products"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"P999\",\n  \"price\": 1500.0,\n  \"stock\": 10,\n  \"typeProduct\": {\n    \"code\": \"EL\",\n    \"description\": \"Electrodom\\u00e9stico\"\n  }\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sellers",
+      "item": [
+        {
+          "name": "GET all Sellers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/sellers",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "sellers"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Seller",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/sellers",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "sellers"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"identification\": \"2025\",\n  \"typeDocument\": {\n    \"code\": \"CC\",\n    \"description\": \"C\\u00e9dula de Ciudadan\\u00eda\"\n  },\n  \"name\": \"Laura\",\n  \"lastName\": \"Garc\\u00eda\",\n  \"age\": 30,\n  \"city\": {\n    \"townCode\": \"05001\"\n  }\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stores",
+      "item": [
+        {
+          "name": "GET all Stores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/stores",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "stores"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Store",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/stores",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "stores"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"S999\",\n  \"name\": \"Nueva Tienda\",\n  \"city\": {\n    \"townCode\": \"05001\"\n  }\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sales",
+      "item": [
+        {
+          "name": "GET all Sales",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/sales",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "sales"
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Sale",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/sales",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "sales"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"store\": {\n    \"code\": \"S001\",\n    \"name\": \"Exito Medellin\",\n    \"city\": {\n      \"townCode\": \"05001\"\n    }\n  },\n  \"seller\": {\n    \"identification\": \"1010\",\n    \"typeDocument\": {\n      \"code\": \"CC\",\n      \"description\": \"C\\u00e9dula de Ciudadan\\u00eda\"\n    },\n    \"name\": \"Mar\\u00eda\",\n    \"lastName\": \"L\\u00f3pez\",\n    \"age\": 32,\n    \"city\": {\n      \"townCode\": \"05001\"\n    }\n  },\n  \"dateSale\": \"2024-12-01\",\n  \"quantity\": 2,\n  \"products\": [\n    {\n      \"product\": {\n        \"code\": \"P001\",\n        \"price\": 2500.0,\n        \"stock\": 10,\n        \"typeProduct\": {\n          \"code\": \"EL\",\n          \"description\": \"Electrodom\\u00e9stico\"\n        }\n      },\n      \"quantity\": 2,\n      \"subtotal\": 5000.0\n    }\n  ]\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
