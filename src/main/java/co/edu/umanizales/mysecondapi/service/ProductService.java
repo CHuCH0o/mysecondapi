@@ -22,14 +22,14 @@ import java.util.List;
 @Getter
 public class ProductService {
 
-    // Lista para almacenar los productos
+    // Lista para guardar los productos cargados
     private final List<Product> products = new ArrayList<>();
 
-    // Nombre del archivo CSV (desde application.properties)
+    // Nombre del archivo CSV con los productos
     @Value("${products_filename}")
     private String productsFilename;
 
-    // Servicio para obtener el tipo de producto
+    // Servicio para obtener el tipo de producto desde los parámetros
     private final ParameterService parameterService;
 
     // Constructor
@@ -37,7 +37,7 @@ public class ProductService {
         this.parameterService = parameterService;
     }
 
-    // Carga automática desde products.csv al iniciar
+    // Carga los productos desde el archivo CSV al iniciar la aplicación
     @PostConstruct
     public void loadProductsFromCSV() throws IOException, URISyntaxException {
         Path pathFile = Paths.get(ClassLoader.getSystemResource(productsFilename).toURI());
@@ -62,7 +62,7 @@ public class ProductService {
                         }
                     }
 
-                    // Si se encuentra el tipo, se crea el producto
+                    // Crear y agregar el producto si se encontró su tipo
                     if (typeProduct != null) {
                         Product product = new Product(code, price, stock, typeProduct);
                         products.add(product);
@@ -82,5 +82,15 @@ public class ProductService {
     // Agrega un producto manualmente
     public void addProduct(Product product) {
         products.add(product);
+    }
+
+    // Busca un producto por su código
+    public Product getProductByCode(String code) {
+        for (Product p : products) {
+            if (p.getCode().equalsIgnoreCase(code)) {
+                return p;
+            }
+        }
+        return null; // Si no se encuentra
     }
 }

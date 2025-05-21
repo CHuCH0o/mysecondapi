@@ -1,14 +1,20 @@
 package co.edu.umanizales.mysecondapi.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class ProductSale {
-    private String code;       // Código del producto vendido
-    private int quantity;      // Cantidad de unidades vendidas
-    private double subtotal;   // Precio total por este producto (price × quantity)
+
+    private Product product;   // Producto vendido
+    private int quantity;      // Cantidad vendida
+    private double subtotal;   // Precio * cantidad
+
+    // Constructor que recibe el producto y la cantidad vendida
+    public ProductSale(Product product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+        this.subtotal = product.getPrice() * quantity; // Se calcula el subtotal automáticamente
+    }
 }

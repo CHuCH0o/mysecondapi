@@ -8,13 +8,13 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Sale {
-    private Store store;                        // Tienda donde se realizó la venta
-    private Seller seller;                      // Vendedor que hizo la venta
-    private LocalDate dateSale;                 // Fecha de la venta
-    private int quantity;                       // Cantidad total de productos vendidos
-    private List<ProductSale> products;         // Lista de productos vendidos, conexion con DTO
-    private double totalSale;                   // Monto total de la venta
+
+    private Store store;                      // Tienda donde se realiza la venta
+    private Seller seller;                    // Vendedor que realizó la venta
+    private LocalDate dateSale;               // Fecha de la venta
+    private int quantity;                     // Cantidad total de productos vendidos
+    private List<ProductSale> products;       // Lista de productos vendidos con su cantidad
 }
